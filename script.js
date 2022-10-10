@@ -41,7 +41,7 @@ if (specialchoice) {
 console.log(choices);
 
 var password="";
-var randomNumber=getrandomNumber(128); //Number between 8 and 128
+var randomNumber=getrandomNumber(choices.length); //Number between 8 and 128
 var randomcharacter=choices[randomNumber];
 password=randomcharacter//+password
 return password
