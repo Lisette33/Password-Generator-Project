@@ -1,28 +1,46 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+
+}
+
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+
+
+
 
 //My answer:
+
 function generatePassword() {
-var uppercaseletters = ["A", "B", "C"];
-var lowercase = ["a", "b", "c"];
-var numeric = ["1", "2", "3"];
-var special = ["!", "@", "#"];
+var uppercaseletters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
-  var userInput=window.prompt("Choose a password length of at least 8 characters and no more than 128 characters");
-  console.log(userInput);
+var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+var numeric = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
+
+var special = ["!", "@", "#", "$", "%", "^", "&", "*"];
+
+var userInput=window.prompt("Choose a password length of at least 8 characters and no more than 128 characters");
+console.log(userInput);
   
-  var upperchoice=window.confirm("Do you want uppercase letters?")
-  console.log(upperchoice);
+var upperchoice=window.confirm("Do you want uppercase letters?")
+console.log(upperchoice);
 
-  var lowerchoice=window.confirm("Do you want lowercase letters?")
-  console.log(lowerchoice);
+var lowerchoice=window.confirm("Do you want lowercase letters?")
+console.log(lowerchoice);
 
-  var numericchoice=window.confirm("Do you want numeric characters?")
-  console.log(numericchoice);
+var numericchoice=window.confirm("Do you want numeric characters?")
+console.log(numericchoice);
 
-  var specialchoice=window.confirm("Do you want special characters?")
-  console.log(specialchoice);
+var specialchoice=window.confirm("Do you want special characters?")
+console.log(specialchoice);
 
 
 var choices=[];
@@ -45,23 +63,24 @@ var randomNumber=getrandomNumber(choices.length); //Number between 8 and 128
 var randomcharacter=choices[randomNumber];
 password=randomcharacter//+password
 return password
+
+
 }
 
 
-
-
-
-
-
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
+//for loop added after above code (run code x amount of times)
+for(var i=0;i<choices.length;i++) {
+  console.log(choices[i]);
 }
+
+
+//alert??
+
+
+
+
+
+//You need to input for loop to run many times for regarding lines 59-61
 
 
 //My answer:
@@ -74,21 +93,6 @@ console.log(Math.floor(Math.random() * 129))
 function getrandomNumber(max) {
   return Math.floor(Math.random() * (max+1))
 }
-
-
-
-
-//Do I have to input if, else if statements?
-
-
-
-
-
-
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
 
 
 //My Answer:
