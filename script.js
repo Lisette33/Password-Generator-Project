@@ -16,9 +16,9 @@ generateBtn.addEventListener("click", writePassword);
 
 
 
-//My answer:
-
+//Function
 function generatePassword() {
+//Variables
 var uppercaseletters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
 
 var lowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -56,37 +56,28 @@ if (numericchoice) {
 if (specialchoice) {
   choices= special.concat(choices);
 }
+if(upperchoice === false && lowerchoice === false && numericchoice === false && specialchoice === false) {
+  window.alert("You need to select at least one character type")
+  return null
+}
+
 console.log(choices);
 
+
+//For loop
 var password="";
-var randomNumber=getrandomNumber(choices.length); //Number between 8 and 128
-var randomcharacter=choices[randomNumber];
-password=randomcharacter//+password
+for(var i=0;i<userInput;i++) {
+  console.log(choices[i]);
+  var randomNumber=getrandomNumber(choices.length); 
+  var randomcharacter=choices[randomNumber];
+  password=randomcharacter+password
+}
+
 return password
 
 
 }
 
-
-//for loop added after above code (run code x amount of times)
-for(var i=0;i<choices.length;i++) {
-  console.log(choices[i]);
-}
-
-
-//alert??
-
-
-
-
-
-//You need to input for loop to run many times for regarding lines 59-61
-
-
-//My answer:
-
-/*A function randomNumber(8,128) that gives you a random number between 8 and 128.
-*/
 
 console.log(Math.floor(Math.random() * 129))
 
@@ -95,10 +86,3 @@ function getrandomNumber(max) {
 }
 
 
-//My Answer:
-/*
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-*/
-
-// window.alert("Your password is "+userInput);
