@@ -1,3 +1,4 @@
+<img width="468" alt="Password_Generator" src="https://user-images.githubusercontent.com/113862182/196072058-cb8e95a3-131a-4b2b-8bd2-8e085a7b8804.png">
 # Password-Generator-Project
 The application allows users to generate passwords randomly.
 
