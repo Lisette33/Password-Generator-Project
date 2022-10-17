@@ -1,17 +1,34 @@
+<img width="468" alt="Password_Generator" src="https://user-images.githubusercontent.com/113862182/196072058-cb8e95a3-131a-4b2b-8bd2-8e085a7b8804.png">
+
 # Password-Generator-Project
 The application allows users to generate passwords randomly.
 
-
-Title
-
+# Name
 User Security: Password Generator
 
+## Author 
+Lisette Morales
+
+## Deployment URL
+https://github.com/Lisette33/Password-Generator-Project
+
+## Description
+The project is an application that allows users to generate a password randomly for their security. The user is able to select from specific criteria to randomly create their password.
+
+## Acknowledgment
+I would like to thank those who provided their helpful guidance.
+
+## Project Guidelines stated as:
+
+### User Story
 
 User Story
 
 AS AN employee with access to sensitive data
 I WANT to randomly generate a password that meets certain criteria
 SO THAT I can create a strong password that provides greater security
+
+### Acceptance Criteria
 
 Acceptance Criteria
 
@@ -29,4 +46,8 @@ THEN my input should be validated and at least one character type should be sele
 WHEN all prompts are answered
 THEN a password is generated that matches the selected criteria
 WHEN the password is generated
-THEN the password is either displayed in an alert or written to the pa
+THEN the password is either displayed in an alert or written to the page
+
+## Licence
+MIT
+
